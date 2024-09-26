@@ -1,20 +1,12 @@
-export class Dog {
-    constructor(vardas, kailioSpalva) {
-        this.name = vardas;
-        this.furColor = kailioSpalva;
-        this.legsCount = 4;
-        this.eyesCount = 2;
+import { Pet } from "./Pet.js";
+
+export class Dog extends Pet {
+    constructor(name, furColor) {
+        super(furColor, name);
+
         this.sound = 'bark';
         this.eatenBones = 0;
         this.savedBones = 0;
-    }
-
-    hi() {
-        return `Sveiki, mano vardas yra ${this.name}!`;
-    }
-
-    intro() {
-        return `Sveiki, mano vardas yra ${this.name}. Mano kailio spalva yra ${this.furColor}. Turiu ${this.legsCount} kojas ir ${this.eyesCount} akis. Jei reikia, moku pasakyti ${this.sound}!`;
     }
 
     takeBones(bonesCount) {
